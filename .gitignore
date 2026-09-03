@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Claude settings
+.claude/
+skills-lock.json
+
+# Development files
+.vscode/
+*.log
+
+# Data files (PDFs, extracted text)
+products/descriptions/
+products/extracted_images/
+about/*.pdf
+extracted_pdf_texts.json
+
+# Package files (website is static, no build needed)
+package.json
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Details - Cannabox</title>
+    <meta name="description" content="Explore products available in this Cannabox machine. Certified CBD oils, gummies, capsules, and botanical wellness products.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+    <header id="header" class="glass-nav fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between lg:h-20">
+                <a href="index.html" class="group flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl border border-emerald-700/40 bg-emerald-900/50 transition-all group-hover:bg-emerald-800/70">
+                        <i data-lucide="leaf" class="h-6 w-6 text-emerald-400"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                </a>
+
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a href="index.html" id="navHome" class="nav-link text-sm font-semibold text-gray-300 transition-colors hover:text-emerald-400">Home</a>
+                    <a href="machines.html" id="navMachines" class="nav-link text-sm font-semibold text-white transition-colors">Machines</a>
+                    <a href="locations.html" id="navLocations" class="nav-link text-sm font-semibold text-gray-300 transition-colors hover:text-emerald-400">Locations</a>
+                    <a href="about.html" id="navAbout" class="nav-link text-sm font-semibold text-gray-300 transition-colors hover:text-emerald-400">About</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden items-center gap-1 rounded-xl border border-emerald-800/40 bg-[#0a1810]/80 p-1 backdrop-blur-sm sm:flex">
+                        <button onclick="switchLanguage('hu')" id="btn-hu" class="rounded-lg px-4 py-2 text-sm font-semibold text-gray-400 transition-all hover:text-white">HU</button>
+                        <button onclick="switchLanguage('en')" id="btn-en" class="rounded-lg px-4 py-2 text-sm font-semibold text-gray-400 transition-all hover:text-white">EN</button>
+                    </div>
+                    <button class="p-2 text-gray-300 hover:text-white md:hidden" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="border-b border-gray-800 bg-[#0a1810]/60 pb-12 pt-32 lg:pb-20 lg:pt-40">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <a href="machines.html" class="group mb-8 inline-flex items-center gap-2 text-emerald-300 transition-colors hover:text-emerald-400">
+                <i data-lucide="arrow-left" class="h-5 w-5 transition-transform group-hover:-translate-x-1"></i>
+                <span id="backText" class="font-semibold">Back to Machines</span>
+            </a>
+            <div id="machineHeader" class="flex flex-col items-start gap-8 lg:flex-row lg:gap-12"></div>
+        </div>
+    </section>
+
+    <section id="categoriesSection" class="py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 id="categoriesTitle" class="mb-10 text-3xl font-bold text-white font-display">Select Product Category</h2>
+            <div id="categoriesGrid" class="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5"></div>
+        </div>
+    </section>
+
+    <section id="productsSection" class="hidden border-y border-gray-800 bg-[#0a1810]/40 py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 flex items-center justify-between">
+                <h2 id="productsTitle" class="text-3xl font-bold text-white font-display">Products</h2>
+                <button onclick="showCategories()" class="flex items-center gap-2 text-sm font-semibold text-emerald-400 transition-colors hover:text-emerald-300">
+                    <i data-lucide="grid" class="h-4 w-4"></i>
+                    <span id="viewCategories">View Categories</span>
+                </button>
+            </div>
+            <div id="productsGrid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+        </div>
+    </section>
+
+    <div id="productModal" class="modal-overlay pointer-events-none fixed inset-0 z-[100] flex items-center justify-center opacity-0 transition-opacity duration-300 hidden bg-black/80 backdrop-blur-sm">
+        <div class="modal-content custom-scrollbar mx-4 w-full max-w-5xl max-h-[95vh] overflow-y-auto rounded-3xl shadow-2xl bg-gradient-to-b from-[#0a1810] to-[#050b08] border border-emerald-700/30">
+
+            <!-- Image Section with Carousel -->
+            <div class="relative bg-black/20 rounded-t-3xl overflow-hidden">
+                <div class="flex items-center justify-center p-8" style="min-height: 400px; max-height: 500px;">
+                    <img id="modalImage" src="" alt="" class="max-h-[450px] w-auto object-contain cursor-zoom-in transition-transform duration-300 hover:scale-105" onclick="openImageZoom(this.src)" />
+                </div>
+
+                <!-- Carousel Controls -->
+                <div id="carouselControls" class="hidden">
+                    <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white transition-all hover:bg-emerald-600 hover:scale-110 backdrop-blur-sm border border-white/20 shadow-lg">
+                        <i data-lucide="chevron-left" class="h-6 w-6"></i>
+                    </button>
+                    <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white transition-all hover:bg-emerald-600 hover:scale-110 backdrop-blur-sm border border-white/20 shadow-lg">
+                        <i data-lucide="chevron-right" class="h-6 w-6"></i>
+                    </button>
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm border border-white/20">
+                        <span id="carouselIndicator">1 / 1</span>
+                    </div>
+                </div>
+
+                <button onclick="closeProductModal()" class="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white transition-all hover:bg-emerald-600 hover:scale-110 backdrop-blur-sm border border-white/20 shadow-lg z-10">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+                <div id="modalBadge" class="absolute left-4 top-4 hidden">
+                    <span class="badge-coming-soon text-sm px-4 py-2">Coming Soon</span>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="space-y-6 p-8">
+                <div class="space-y-3">
+                    <span id="modalCategory" class="inline-block text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-700/30"></span>
+                    <h3 id="modalTitle" class="text-3xl md:text-4xl font-bold text-white font-display leading-tight"></h3>
+                </div>
+
+                <p id="modalShortDesc" class="text-lg text-emerald-100/80 leading-relaxed"></p>
+
+                <!-- CBD/THC Info Cards -->
+                <div class="grid grid-cols-2 gap-4 py-4">
+                    <div class="rounded-xl border border-emerald-800/40 bg-emerald-950/30 p-4 backdrop-blur-sm">
+                        <span id="modalCBDLabel" class="mb-2 block text-xs font-bold uppercase tracking-wider text-emerald-400/80">CBD Content</span>
+                        <span id="modalCBD" class="text-xl font-bold text-white"></span>
+                    </div>
+                    <div class="rounded-xl border border-emerald-800/40 bg-emerald-950/30 p-4 backdrop-blur-sm">
+                        <span id="modalTHCLabel" class="mb-2 block text-xs font-bold uppercase tracking-wider text-emerald-400/80">THC Content</span>
+                        <span id="modalTHC" class="text-xl font-bold text-white"></span>
+                    </div>
+                </div>
+
+                <!-- Full Description (Expandable) -->
+                <div class="border-t border-emerald-900/30 pt-6">
+                    <button onclick="toggleDetails()" class="group flex w-full items-center justify-between text-left rounded-xl p-4 hover:bg-emerald-950/30 transition-colors">
+                        <span id="detailsToggle" class="font-bold text-white transition-colors group-hover:text-emerald-400 font-display text-lg">Full Description</span>
+                        <i id="detailsIcon" data-lucide="chevron-down" class="h-6 w-6 text-emerald-400 transition-transform"></i>
+                    </button>
+                    <div id="modalDetails" class="mt-4 hidden px-4 pb-4">
+                        <div id="modalFullDesc" class="text-emerald-100/70 leading-relaxed text-base"></div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="border-t border-emerald-900/30 pt-6">
+                    <button onclick="closeProductModal()" class="w-full btn-primary text-lg py-4 rounded-xl">
+                        <i data-lucide="check-circle" class="h-5 w-5"></i>
+                        <span id="closeModalBtn">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Lightbox -->
+    <div id="imageZoomModal" class="fixed inset-0 z-[110] hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4" onclick="closeImageZoom()">
+        <button onclick="closeImageZoom()" class="absolute right-6 top-6 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-white/20 hover:scale-110 backdrop-blur-sm border border-white/20 shadow-lg">
+            <i data-lucide="x" class="h-7 w-7"></i>
+        </button>
+        <img id="zoomedImage" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain" onclick="event.stopPropagation()" />
+    </div>
+
+    <script>
+        function openImageZoom(src) {
+            const modal = document.getElementById('imageZoomModal');
+            const img = document.getElementById('zoomedImage');
+            if (modal && img) {
+                img.src = src;
+                modal.classList.remove('hidden');
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+
+        function closeImageZoom() {
+            const modal = document.getElementById('imageZoomModal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+
+    <footer class="border-t border-gray-800 bg-[#050b08] pb-8 pt-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-emerald-900/50 rounded-xl flex items-center justify-center border border-emerald-700/40">
+                            <i data-lucide="leaf" class="w-6 h-6 text-emerald-400"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                    </div>
+                    <p id="footerDesc" class="text-emerald-100/70 mb-8 max-w-md leading-relaxed text-sm">
+                        Certified botanical CBD wellness through intelligent vending. Quality, accessibility, and complete privacy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 id="footerLinks" class="text-white font-bold mb-6 font-display">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" id="footerHomeLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Home</a></li>
+                        <li><a href="machines.html" id="footerMachinesLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Machines</a></li>
+                        <li><a href="locations.html" id="footerLocationsLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Locations</a></li>
+                        <li><a href="about.html" id="footerAboutLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">About</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 id="footerLegal" class="text-white font-bold mb-6 font-display">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" id="footerPrivacy" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Privacy Policy</a></li>
+                        <li><a href="#" id="footerTerms" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Terms of Service</a></li>
+                        <li><button onclick="openDisclaimerViewer()" id="footerDisclaimer" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium text-left">Legal Disclaimer</button></li>
+                        <li><button onclick="openStuckProductModal()" id="footerStuckProduct" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium text-left">Stuck Product Info</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-sm text-emerald-200/50">© 2026 Cannabox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/disclaimer.js"></script>
+    <script src="js/stuck-product.js"></script>
+    <script src="js/machines.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

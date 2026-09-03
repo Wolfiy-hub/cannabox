@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cannabox</title>
+    <meta name="description" content="Discover Cannabox: our mission, organic botanical sourcing, laboratory compliance, and intelligent retail innovation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header id="header" class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-emerald-900/50 rounded-xl flex items-center justify-center border border-emerald-700/40 transition-all group-hover:bg-emerald-800/70">
+                        <i data-lucide="leaf" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" id="navHome" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">Home</a>
+                    <a href="machines.html" id="navMachines" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">Machines</a>
+                    <a href="locations.html" id="navLocations" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">Locations</a>
+                    <a href="about.html" id="navAbout" class="nav-link text-sm font-semibold text-white transition-colors">About</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:flex items-center gap-1 bg-[#0a1810]/80 rounded-xl p-1 border border-emerald-800/40 backdrop-blur-sm">
+                        <button onclick="switchLanguage('hu')" id="btn-hu" class="px-4 py-2 rounded-lg text-sm font-semibold transition-all text-gray-400 hover:text-white">HU</button>
+                        <button onclick="switchLanguage('en')" id="btn-en" class="px-4 py-2 rounded-lg text-sm font-semibold transition-all text-gray-400 hover:text-white">EN</button>
+                    </div>
+                    <button class="md:hidden p-2 text-gray-300 hover:text-white" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden hidden border-t border-emerald-800/30 bg-[#050b08]/95 backdrop-blur-lg">
+            <div class="px-4 py-5 space-y-3">
+                <a href="index.html" id="mobileNavHome" class="block py-3 px-5 rounded-xl hover:bg-emerald-900/10 text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="machines.html" id="mobileNavMachines" class="block py-3 px-5 rounded-xl hover:bg-emerald-900/10 text-gray-300 hover:text-white transition-colors">Machines</a>
+                <a href="locations.html" id="mobileNavLocations" class="block py-3 px-5 rounded-xl hover:bg-emerald-900/10 text-gray-300 hover:text-white transition-colors">Locations</a>
+                <a href="about.html" id="mobileNavAbout" class="block py-3 px-5 rounded-xl bg-emerald-900/20 border border-emerald-700/40 font-semibold text-white">About</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-b from-[#0a1810] to-[#050b08] border-b border-emerald-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="mb-8 inline-flex items-center gap-3 rounded-full border border-emerald-700/50 bg-emerald-900/30 px-5 py-3 text-sm font-bold text-emerald-300 backdrop-blur-md">
+                    <i data-lucide="award" class="h-4 w-4"></i>
+                    <span id="aboutBadge">Our Story and Standards</span>
+                </div>
+                <h1 id="aboutTitle" class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display tracking-tight">About Cannabox</h1>
+                <p id="aboutDesc" class="text-xl text-emerald-100/70 leading-relaxed font-light">
+                    Modern CBD vending solutions bringing quality wellness products to the heart of Budapest, available 24/7.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            <div class="space-y-12">
+                <div class="glass-panel p-8 lg:p-10 rounded-2xl">
+                    <h2 id="missionTitle" class="text-3xl font-bold text-white mb-4 font-display">Our Mission</h2>
+                    <p id="missionText" class="text-emerald-100/80 leading-relaxed text-base">
+                        Cannabox makes premium CBD products accessible when and where you need them. Located in the heart of Budapest at Gozsdu Udvar, our smart vending machines offer 70+ quality CBD products 24/7. No waiting, no hassle – just fast, convenient access to oils, gummies, chocolates, and more with simple card or NFC payment.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 lg:p-10 rounded-2xl">
+                    <h2 id="qualityTitle" class="text-3xl font-bold text-white mb-4 font-display">Quality You Can Trust</h2>
+                    <p id="qualityText" class="text-emerald-100/80 leading-relaxed text-base">
+                        We carefully select products from trusted European brands that meet strict quality standards. All items contain less than 0.2% THC and comply with Hungarian and EU regulations. From CBD oils and gummies to unique Tyson 2.0 products, every item is chosen for quality and safety.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 lg:p-10 rounded-2xl">
+                    <h2 id="innovationTitle" class="text-3xl font-bold text-white mb-4 font-display">Convenience Meets Innovation</h2>
+                    <p id="innovationText" class="text-emerald-100/80 leading-relaxed text-base">
+                        Our vending machines use smart technology to keep products fresh and transactions secure. Located at 1072 Budapest, Dob u. 16., right at the entrance of Gozsdu Udvar, we're open non-stop with contactless payment options. Whether it's morning or midnight, Cannabox is there when you need it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 pt-8">
+                <div class="glass-panel p-8 rounded-2xl flex items-start gap-5">
+                    <div class="w-14 h-14 bg-emerald-900/40 rounded-xl flex items-center justify-center flex-shrink-0 border border-emerald-700/40">
+                        <i data-lucide="check-circle" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <div>
+                        <h3 id="certifiedTitle" class="text-xl font-bold text-white mb-2 font-display">Premium Selection</h3>
+                        <p id="certifiedDesc" class="text-sm text-emerald-100/70 leading-relaxed">70+ quality CBD products from trusted European brands including exclusive Tyson 2.0 items.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl flex items-start gap-5">
+                    <div class="w-14 h-14 bg-emerald-900/40 rounded-xl flex items-center justify-center flex-shrink-0 border border-emerald-700/40">
+                        <i data-lucide="scale" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <div>
+                        <h3 id="legalTitle" class="text-xl font-bold text-white mb-2 font-display">100% Legal</h3>
+                        <p id="legalDesc" class="text-sm text-emerald-100/70 leading-relaxed">All products contain less than 0.2% THC and fully comply with Hungarian and EU regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-b from-[#0a1810] to-[#050b08] border-t border-emerald-900/20 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-emerald-900/50 rounded-xl flex items-center justify-center border border-emerald-700/40">
+                            <i data-lucide="leaf" class="w-6 h-6 text-emerald-400"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                    </div>
+                    <p id="footerDesc" class="text-emerald-100/70 mb-8 max-w-md leading-relaxed text-sm">
+                        Certified botanical CBD wellness through intelligent vending. Quality, accessibility, and complete privacy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 id="footerLinks" class="text-white font-bold mb-6 font-display">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" id="footerHomeLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Home</a></li>
+                        <li><a href="machines.html" id="footerMachinesLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Machines</a></li>
+                        <li><a href="locations.html" id="footerLocationsLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Locations</a></li>
+                        <li><a href="about.html" id="footerAboutLink" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">About</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 id="footerLegal" class="text-white font-bold mb-6 font-display">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" id="footerPrivacy" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Privacy Policy</a></li>
+                        <li><a href="#" id="footerTerms" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium">Terms of Service</a></li>
+                        <li><button onclick="openDisclaimerViewer()" id="footerDisclaimer" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium text-left">Legal Disclaimer</button></li>
+                        <li><button onclick="openStuckProductModal()" id="footerStuckProduct" class="text-emerald-200/70 hover:text-emerald-400 transition-colors text-sm font-medium text-left">Stuck Product Info</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-900/20 pt-8 text-center">
+                <p id="footerCopyright" class="text-emerald-200/50 text-sm font-medium">© 2026 Cannabox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/disclaimer.js"></script>
+    <script src="js/stuck-product.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

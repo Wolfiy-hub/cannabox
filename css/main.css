@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --bg-dark: #050b08;
+    --bg-surface: #0a1410;
+    --bg-surface-elevated: #0f1f18;
+    --bg-card: rgba(13, 27, 21, 0.75);
+    --border-subtle: rgba(16, 185, 129, 0.15);
+    --border-highlight: rgba(52, 211, 153, 0.35);
+
+    --color-emerald-glow: rgba(16, 185, 129, 0.2);
+    --color-primary: #10b981;
+    --color-primary-light: #34d399;
+    --color-primary-dark: #047857;
+
+    --color-text-main: #f3fdf8;
+    --color-text-muted: #94a89f;
+    --color-text-dim: #647b71;
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-pill: 9999px;
+}
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--color-text-main);
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 90%, rgba(4, 120, 87, 0.06) 0%, transparent 60%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #060e0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #143527;
+    border-radius: 4px;
+    border: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1b4936;
+}
+
+/* Selection */
+::selection {
+    background-color: rgba(16, 185, 129, 0.35);
+    color: #6ee7b7;
+}
+
+/* Focus styles */
+*:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(10, 22, 17, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-hover {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-highlight);
+    box-shadow: 0 24px 48px -12px rgba(16, 185, 129, 0.15), 0 12px 24px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(52, 211, 153, 0.15);
+}
+
+.glass-nav {
+    background: rgba(5, 11, 8, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+/* Text Gradients */
+.text-gradient-emerald {
+    background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #ca8a04 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Language active toggle */
+.lang-active {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Botanical Noise Pattern Overlay */
+.botanical-glow {
+    position: relative;
+}
+
+.botanical-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+}
+
+/* Utility Animations */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+}

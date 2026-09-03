@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machines - Cannabox</title>
+    <meta name="description" content="Explore our intelligent CBD vending machines. Advanced climate control, secure payment, and 24/7 botanical wellness dispensing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+    <header id="header" class="glass-nav fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between lg:h-20">
+                <a href="index.html" class="group flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-900/50 border border-emerald-700/40 transition-all group-hover:bg-emerald-800/70">
+                        <i data-lucide="leaf" class="h-6 w-6 text-emerald-400"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                </a>
+
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a href="index.html" id="navHome" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">Home</a>
+                    <a href="machines.html" id="navMachines" class="nav-link text-sm font-semibold text-white transition-colors">Machines</a>
+                    <a href="locations.html" id="navLocations" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">Locations</a>
+                    <a href="about.html" id="navAbout" class="nav-link text-sm font-semibold text-gray-300 hover:text-emerald-400 transition-colors">About</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="hidden items-center gap-1 rounded-xl border border-emerald-800/40 bg-[#0a1810]/80 p-1 backdrop-blur-sm sm:flex">
+                        <button onclick="switchLanguage('hu')" id="btn-hu" class="rounded-lg px-4 py-2 text-sm font-semibold text-gray-400 transition-all hover:text-white">HU</button>
+                        <button onclick="switchLanguage('en')" id="btn-en" class="rounded-lg px-4 py-2 text-sm font-semibold text-gray-400 transition-all hover:text-white">EN</button>
+                    </div>
+                    <button class="p-2 text-gray-300 hover:text-white md:hidden" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden border-t border-emerald-800/30 bg-[#050b08]/95 backdrop-blur-lg md:hidden">
+            <div class="space-y-3 px-4 py-5">
+                <a href="index.html" id="mobileNavHome" class="block rounded-xl px-5 py-3 text-gray-300 transition-colors hover:bg-emerald-900/10 hover:text-white">Home</a>
+                <a href="machines.html" id="mobileNavMachines" class="block rounded-xl bg-emerald-900/20 border border-emerald-700/40 px-5 py-3 font-semibold text-white">Machines</a>
+                <a href="locations.html" id="mobileNavLocations" class="block rounded-xl px-5 py-3 text-gray-300 transition-colors hover:bg-emerald-900/10 hover:text-white">Locations</a>
+                <a href="about.html" id="mobileNavAbout" class="block rounded-xl px-5 py-3 text-gray-300 transition-colors hover:bg-emerald-900/10 hover:text-white">About</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="border-b border-emerald-900/20 bg-gradient-to-b from-[#0a1810] to-[#050b08] pb-16 pt-32 lg:pb-24 lg:pt-40">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="mb-8 inline-flex items-center gap-3 rounded-full border border-emerald-700/50 bg-emerald-900/30 px-5 py-3 text-sm font-bold text-emerald-300 backdrop-blur-md">
+                    <i data-lucide="cpu" class="h-4 w-4"></i>
+                    <span id="machinesBadge">Intelligent Botanical Dispensing</span>
+                </div>
+                <h1 id="machinesTitle" class="mb-6 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-display tracking-tight">Our Machines</h1>
+                <p id="machinesDesc" class="text-xl leading-relaxed text-emerald-100/70 font-light">
+                    State-of-the-art vending technology engineered for certified botanical wellness. Climate-controlled precision meets pharmaceutical-grade security.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#050b08] via-[#0a1810] to-[#050b08] opacity-50"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div id="machinesGrid" class="grid gap-10 md:grid-cols-2 lg:gap-12"></div>
+        </div>
+    </section>
+
+    <footer class="border-t border-emerald-900/20 bg-gradient-to-b from-[#0a1810] to-[#050b08] pb-10 pt-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+                <div class="lg:col-span-2">
+                    <div class="mb-6 flex items-center gap-3">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-700/40 bg-emerald-900/50">
+                            <i data-lucide="leaf" class="h-6 w-6 text-emerald-400"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-gradient-emerald font-display">Cannabox</span>
+                    </div>
+                    <p id="footerDesc" class="mb-8 max-w-md text-sm leading-relaxed text-emerald-100/70">
+                        Certified botanical CBD wellness through intelligent vending. Quality, accessibility, and complete privacy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 id="footerLinks" class="mb-6 font-bold text-white font-display">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" id="footerHomeLink" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400">Home</a></li>
+                        <li><a href="machines.html" id="footerMachinesLink" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400">Machines</a></li>
+                        <li><a href="locations.html" id="footerLocationsLink" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400">Locations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 id="footerLegal" class="mb-6 font-bold text-white font-display">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" id="footerPrivacy" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400">Privacy Policy</a></li>
+                        <li><a href="#" id="footerTerms" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400">Terms of Service</a></li>
+                        <li><button onclick="openDisclaimerViewer()" id="footerDisclaimer" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400 text-left">Legal Disclaimer</button></li>
+                        <li><button onclick="openStuckProductModal()" id="footerStuckProduct" class="text-sm font-medium text-emerald-200/70 transition-colors hover:text-emerald-400 text-left">Stuck Product Info</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-900/20 pt-8 text-center">
+                <p id="footerCopyright" class="text-sm font-medium text-emerald-200/50">© 2026 Cannabox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/disclaimer.js"></script>
+    <script src="js/stuck-product.js"></script>
+    <script src="js/machines.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
