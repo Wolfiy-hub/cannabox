@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@font-face {
+    font-family: 'FredokaOne';
+    src: url('../font/FredokaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --bg-dark: #050b08;
@@ -26,13 +32,17 @@
 }
 
 * {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'FredokaOne', cursive, sans-serif;
     box-sizing: border-box;
 }
 
+body, button, input, select, textarea {
+    font-family: 'FredokaOne', cursive, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: 'Space Grotesk', sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'FredokaOne', cursive, sans-serif;
+    letter-spacing: -0.01em;
 }
 
 html {
