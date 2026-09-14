@@ -11,10 +11,104 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.45;
-    filter: brightness(0.85) contrast(1.35);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+    opacity: 0.34;
+    filter: brightness(0.65) contrast(1.25);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+}
+
+/* Product navigation */
+.product-nav {
+    position: relative;
+}
+
+.product-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.product-nav-toggle:hover,
+.product-nav-toggle:focus-visible {
+    color: #34d399;
+}
+
+.product-nav-chevron {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.product-nav.is-open .product-nav-chevron {
+    transform: rotate(180deg);
+}
+
+.product-nav-menu {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 50%;
+    z-index: 60;
+    display: none;
+    width: min(34rem, 90vw);
+    transform: translateX(-50%);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(5, 11, 8, 0.97);
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.product-nav:hover .product-nav-menu,
+.product-nav:focus-within .product-nav-menu,
+.product-nav.is-open .product-nav-menu {
+    display: grid;
+}
+
+.product-nav-group h3 {
+    margin-bottom: 0.5rem;
+    color: #6ee7b7;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.product-nav-group a {
+    display: block;
+    padding: 0.35rem 0;
+    color: rgba(209, 250, 229, 0.75);
+    font-size: 0.8125rem;
+    transition: color 0.2s ease;
+}
+
+.product-nav-group a:hover,
+.product-nav-group a:focus-visible {
+    color: #34d399;
+}
+
+.mobile-product-nav-menu {
+    display: none;
+    padding: 0 1.25rem 0.75rem;
+}
+
+.mobile-product-nav.is-open .mobile-product-nav-menu {
+    display: block;
+}
+
+.mobile-product-nav-menu .product-nav-group {
+    padding: 0.5rem 0;
+}
+
+@media (max-width: 767px) {
+    .product-nav-menu {
+        display: none;
+    }
 }
 
 .botanical-hero-overlay {

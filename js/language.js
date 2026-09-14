@@ -11,22 +11,6 @@ const translations = {
         mobileNavLocations: 'Helyszínek',
         mobileNavAbout: 'Rólunk',
 
-        dropdownTysonStatus: 'Hamarosan',
-        mobileDropdownTysonStatus: 'Hamarosan',
-        dropdownCannaboxStatus: '0-24 Aktív',
-
-        catNameTeas: 'Cannabis Teák',
-        catNameBrownies: 'Cannabis Brownie-k',
-        catNameGummies: 'CBD Gumicukrok',
-        catNameChewingGum: 'CBD Rágógumi',
-        catNameChocolate: 'Cannabis Csokoládék',
-        catNameCookies: 'Cannabis Kekszek',
-        catNameCapsules: 'Gyógynövény Kapszulák',
-        catNameDextrose: 'Cannabis Szőlőcukor',
-        catNameLollipops: 'CBD Nyalókák',
-        catNameDrinks: 'Cannabis Italok',
-        catNameOils: 'CBD Olajok',
-
         langTitle: 'Válasszon nyelvet',
         langSubtitle: 'Válasszon nyelvet / Choose your language',
 
@@ -45,9 +29,9 @@ const translations = {
     >
 `,
 
-        heroBadge: 'Prémium CBD Termékek – Gyorsan, Egyszerűen, Non-stop',
-        heroTitle: "CBD Prémium <br><span class='text-gradient-emerald'>Minden Órában</span>",
-        heroSubtitle: 'Laboratóriumilag bevizsgált prémium CBD termékek intelligens automatából, a belváros szívében. Gyors vásárlás bankkártyával és NFC-vel, 0-24 órában. Kényelmes, diszkrét, mindig elérhető.',
+        heroBadge: 'CBD Termékek Automatából – Gyorsan, Egyszerűen, Non-stop',
+        heroTitle: "Prémium CBD <br><span class='text-gradient-emerald'>Minden Órában</span>",
+        heroSubtitle: 'Prémium CBD termékek automatából, a belváros szívében. Gyors vásárlás bankkártyával, 0-24 órában. Kényelmes, diszkrét, mindig elérhető.',
         ctaPrimary: 'Automaták Felfedezése',
         ctaSecondary: 'Helyszínek Keresése',
         stat1: 'Non-stop Elérhető',
@@ -65,7 +49,7 @@ const translations = {
         feat3Title: 'Teljes Diszkréció',
         feat3Desc: 'Anonim tranzakciók banki szintű titkosítással. Nem tárolunk személyes adatokat.',
         feat3Tag: 'Teljes Magánélet',
-        footerDesc: 'Laboratóriumilag bevizsgált prémium CBD termékek intelligens automatákból. Minőség, kényelem és biztonság.',
+        footerDesc: 'Laboratóriumban tesztelt, tanúsított botanikai CBD intelligens automatákból. Minőség, kényelem és biztonság.',
         footerLinks: 'Gyors Linkek',
         footerLegal: 'Jogi Információk',
         modalCBDLabel: 'CBD Tartalom',
@@ -78,12 +62,12 @@ const translations = {
         feat1Visual: 'Minden termék ellenőrzött és lezárt a biztonságodért',
         feat2Check1: 'Mindig Nyitva',
         feat2Check2: 'Okos Hőmérséklet-Szabályozás',
-        feat2Check3: 'Kártyás & NFC Fizetés',
+        feat2Check3: 'Többféle Fizetési Opció',
         feat2Visual: 'Azonnali tranzakciók, nulla várakozási idő',
         feat3Check1: 'Végponttól Végpontig Titkosított',
         feat3Check2: 'Nincs Emberi Kapcsolat',
         feat3Check3: 'Bizalmas Kiszállítás',
-        feat3Visual: 'Banki szintű titkosítás minden tranzakcióhoz',
+        feat3Visual: 'Katonai szintű titkosítás minden tranzakcióhoz',
 
         footerHomeLink: 'Főoldal',
         footerMachinesLink: 'Automaták',
@@ -105,66 +89,77 @@ const translations = {
         legalTitle: '100% Jogszerű',
         legalDesc: 'Teljes mértékben megfelel a magyar és európai uniós törvényeknek.',
 
-        machinesBadge: 'Intelligens Értékesítés',
+        machinesBadge: 'Intelligens Botanikai Értékesítés',
         machinesTitle: 'Automatáink',
         machinesDesc: 'Csúcstechnológiás automatamegoldások prémium bio CBD termékekhez. Klímaszabályozott pontosság és biztonság.',
         backText: 'Vissza az automatákhoz',
         categoriesTitle: 'Válasszon Kategóriát',
 
-        locationsBadge: 'Hálózatunk',
+        locationsBadge: 'Botanikai Hálózat',
         locationsTitle: 'Helyszíneink',
-        locationsDesc: 'Találja meg a Cannabox és Tyson automatákat Budapest szívében, a Gozsdu Udvar bejáratánál.',
+        locationsDesc: 'Találja meg legközelebbi Cannabox automatáját Budapesten és kiemelt nagyvárosokban.',
 
         aboutBadge: 'Történetünk és Szabványaink',
         aboutTitle: 'A Cannabox-ról',
-        aboutDesc: 'Úttörő szerep a prémium CBD termékek kiskereskedelmében a legmodernebb technológia és laboratóriumi tisztaság által.',
+        aboutDesc: 'Úttörő szerep a növényi wellness kiskereskedelemben a legmodernebb technológia és tiszta bio minőség által.',
         missionTitle: 'Küldetésünk',
-        missionText: 'A Cannabox azzal a céllal jött létre, hogy a laboratóriumilag bevizsgált prémium CBD termékeket egyszerűen elérhetővé, kényelmessé és teljesen diszkrétté tegye. A budapesti Gozsdu Udvar bejáratánál lévő intelligens automatáink a nap 24 órájában elérhetők, érintésmentes bankkártyás és NFC fizetéssel.',
+        missionText: 'A Cannabox azzal a céllal jött létre, hogy a tanúsított bio CBD termékeket egyszerűen elérhetővé, kényelmessé és teljesen diszkrétté tegye. Hiszünk abban, hogy a természetes wellnessnek akadálymentesnek kell lennie. Precíziós automatáinkkal a prémium minőséget hozzuk el Önnek a nap 24 órájában, sorban állás nélkül.',
         qualityTitle: 'Tanúsított Minőség',
-        qualityText: 'Minden egyes tétel független akkreditált laboratóriumi vizsgálaton esik át a tisztaság, hatóanyag-profil és növényvédőszer-mentesség igazolására. Kizárólag megbízható európai gyártóktól és a hivatalos Tyson 2.0 termékcsaládból válogatunk. Minden készítmény THC tartalma 0.2% alatti a jogszabályoknak megfelelően.',
+        qualityText: 'Minden egyes tétel független akkreditált laboratóriumi vizsgálaton esik át a tisztaság, hatóanyag-profil és növényvédőszer-mentesség igazolására. Kizárólag európai bio gazdaságokból szerzünk be alapanyagot. Minden készítmény THC tartalma 0.2% alatti a magyar és uniós jogszabályoknak megfelelően.',
         innovationTitle: 'Intelligens Technológia',
-        innovationText: 'Okos automatáink többzónás klímaszabályozással rendelkeznek, megóvva az érzékeny hatóanyagokat. A valós idejű telemetria biztosítja a készlet frissességét, a bankkártyás és okostelefonos NFC fizetés pedig azonnali, zökkenőmentes és biztonságos vásárlást nyújt.',
+        innovationText: 'Okos automatáink többzónás klímaszabályozással rendelkeznek, megóvva az érzékeny növényi terpéneket és kannabinoidokat. A valós idejű telemetria biztosítja a készlet frissességét, a kártyás és NFC fizetés pedig gyors, érintésmentes vásárlást tesz lehetővé.',
 
         viewCategories: 'Kategóriák Megtekintése',
         productsTitle: 'Termékek',
         findMachineBtn: 'Megtalálás Automatában',
         cbdContent: 'CBD Tartalom',
         thcContent: 'THC Tartalom',
-        detailsToggle: 'Részletes Leírás',
+        detailsToggle: 'Részletes Specifikáció',
         comingSoon: 'Hamarosan',
         available: 'Elérhető',
 
         // Helyszín Kártyák
         loc1Status: 'Aktív 24/7',
-        loc1Title: 'Cannabox Automata',
-        loc1Address: '1072 Budapest, Dob u. 16. (A Gozsdu Udvar bejáratánál)',
-        loc1HoursLabel: 'Nyitvatartás',
-        loc1Hours: 'Non-stop (0-24)',
+        loc1Title: 'Budapest Oktogon',
+        loc1Address: 'Teréz krt. 55, 1067 Budapest',
+        loc1ModelLabel: 'Automata Típus',
+        loc1Model: 'Cannabox Standard',
         loc1StockLabel: 'Készlet Állapot',
-        loc1Stock: '70+ Termék Raktáron',
+        loc1Stock: '40+ Termék Raktáron',
         loc1PaymentLabel: 'Fizetési Módok',
-        loc1Payment: 'Bankkártya & NFC',
-        loc1Btn: 'Termékek Megtekintése',
-        loc1DirectionsBtn: 'Útvonaltervezés',
+        loc1Payment: 'Érintésmentes, Kártya & NFC',
+        loc1Btn: 'Élő Készlet Megtekintése',
 
         loc2Status: 'Hamarosan',
-        loc2Title: 'Tyson Automata',
-        loc2Address: '1072 Budapest, Dob u. 16. (A Gozsdu Udvar bejáratánál)',
-        loc2HoursLabel: 'Nyitvatartás',
-        loc2Hours: 'Non-stop (0-24)',
+        loc2Title: 'Budapest Belváros',
+        loc2Address: 'Váci utca 12, 1052 Budapest',
+        loc2ModelLabel: 'Automata Típus',
+        loc2Model: 'Cannabox Pro Max',
         loc2StockLabel: 'Készlet Állapot',
-        loc2Stock: 'Tyson 2.0 Termékek',
+        loc2Stock: '60+ Termék Raktáron',
         loc2PaymentLabel: 'Fizetési Módok',
-        loc2Payment: 'Bankkártya & NFC',
-        loc2Btn: 'Termékek Megtekintése',
-        loc2DirectionsBtn: 'Útvonaltervezés',
+        loc2Payment: 'Készpénz, Kártya, Biometria',
+        loc2Btn: 'Élő Készlet Megtekintése',
 
-        locMapBadge: 'Helyszíntérkép',
-        locMapTitle: 'Keressen Minket Budapesten',
-        locMapDesc: 'A Cannabox és a Tyson automata is a Gozsdu Udvar bejáratánál található (Dob u. 16.)',
-        locActiveUnits: 'Budapest, Gozsdu Udvar',
-        locAddress: '1072 Budapest, Dob u. 16. (Gozsdu Udvar bejárat)',
-        locGetDirections: 'Megnyitás Google Térképen',
+        loc3Status: 'Hamarosan',
+        loc3Title: 'Debrecen Városközpont',
+        loc3Address: 'Piac utca 28, 4025 Debrecen',
+        loc3ModelLabel: 'Automata Típus',
+        loc3Model: 'Cannabox Kompakt',
+        loc3LaunchLabel: 'Tervezett Indulás',
+        loc3Launch: '2026 Q3',
+        loc3PaymentLabel: 'Fizetési Módok',
+        loc3Payment: 'Csak Érintésmentes & Kártya',
+        loc3Btn: 'Modell Specifikációk',
+
+        // Telemetria
+        locTelemetryBadge: 'Élő Telemetria',
+        locTelemetryTitle: 'Országos Automata Hálózat',
+        locOnlineUnits: 'Online: 2 Egység',
+        locDeployUnits: 'Telepítés: 1 Egység',
+        locMapTitle: 'Interaktív Térkép Rendszer',
+        locMapDesc: 'Valós idejű GPS navigáció, élő készlet elérhetőség és távolságbecslés minden magyarországi automata csomópontnál.',
+        locMapCoords: '47.4979° É, 19.0402° K (Budapest Központ)',
 
         // Jogi Nyilatkozat
         footerDisclaimer: 'Jogi Nyilatkozat',
@@ -181,7 +176,7 @@ const translations = {
         certifiedTitle: '100% Laboratóriumi Minőség',
         certifiedDesc: 'Független harmadik fél által tesztelt minden tételhez igazolt tanúsítvánnyal.',
         legalTitle: 'Teljes EU Megfelelőség',
-        legalDesc: 'Teljes mértékben megfelel a magyar és európai uniós jogszabályoknak.'
+        legalDesc: 'Teljes mértékben megfelel a magyar gyógyszerészeti és európai uniós botanikai szabályozásnak.'
     },
 
     en: {
@@ -195,22 +190,6 @@ const translations = {
         mobileNavProducts: 'Products',
         mobileNavLocations: 'Locations',
         mobileNavAbout: 'About',
-
-        dropdownTysonStatus: 'Coming Soon',
-        mobileDropdownTysonStatus: 'Coming Soon',
-        dropdownCannaboxStatus: '24/7 Active',
-
-        catNameTeas: 'Cannabis Teas',
-        catNameBrownies: 'Cannabis Brownies',
-        catNameGummies: 'CBD Gummies',
-        catNameChewingGum: 'CBD Chewing Gum',
-        catNameChocolate: 'Cannabis Chocolates',
-        catNameCookies: 'Cannabis Cookies',
-        catNameCapsules: 'Herbal Capsules',
-        catNameDextrose: 'Cannabis Dextrose',
-        catNameLollipops: 'CBD Lollipops',
-        catNameDrinks: 'Cannabis Drinks',
-        catNameOils: 'CBD Oils',
 
         langTitle: 'Select Language',
         langSubtitle: 'Válasszon nyelvet / Choose your language',
@@ -230,17 +209,17 @@ const translations = {
     >
 `,
 
-        heroBadge: 'Premium CBD Products – Fast, Simple, 24/7',
-        heroTitle: "CBD Premium <br><span class='text-gradient-emerald'>Around the Clock</span>",
-        heroSubtitle: 'Laboratory tested premium CBD products dispensed through intelligent vending in the heart of Budapest. Fast Card & NFC contactless payment, available 24/7 with complete discretion.',
+        heroBadge: 'Premium CBD Products from Vending Machines – Fast, Simple, 24/7',
+        heroTitle: "Premium CBD <br><span class='text-gradient-emerald'>Around the Clock</span>",
+        heroSubtitle: 'Premium CBD products from vending machines in the heart of Budapest. Fast contactless payment, available 24/7. Convenient, discreet, always accessible.',
         ctaPrimary: 'Explore Machines',
         ctaSecondary: 'Find Locations',
-        stat1: 'Non-stop Available',
-        stat2: 'Premium Products',
-        stat3: '100% Legal & Certified',
-        stat4: 'Card & NFC Payment',
+        stat1: 'Always Available',
+        stat2: 'EU Certified',
+        stat3: 'Premium Products',
+        stat4: 'City Locations',
         featuresTitle: 'Why Choose Cannabox?',
-        featuresSubtitle: 'Intelligent dispensing technology meets certified premium quality',
+        featuresSubtitle: 'Intelligent dispensing technology meets certified botanical wellness',
         feat1Title: 'Lab-Certified Purity',
         feat1Desc: 'Every product undergoes independent third-party laboratory analysis. Full spectrum analysis, zero contaminants, certified organic.',
         feat1Tag: 'Premium Assurance',
@@ -250,7 +229,7 @@ const translations = {
         feat3Title: 'Complete Privacy',
         feat3Desc: 'Anonymous transactions with encrypted payment processing. No personal data retention, no judgment, total discretion.',
         feat3Tag: 'Complete Privacy',
-        footerDesc: 'Laboratory tested premium CBD products through intelligent vending. Certified quality, accessibility, and complete privacy.',
+        footerDesc: 'Laboratory-tested, certified botanical CBD through intelligent vending. Quality, accessibility, and complete privacy.',
         footerLinks: 'Quick Links',
         footerLegal: 'Legal',
         modalCBDLabel: 'CBD Content',
@@ -261,14 +240,14 @@ const translations = {
         feat1Check2: 'EU Compliant',
         feat1Check3: 'Purity Guaranteed',
         feat1Visual: 'Every product verified and sealed for your safety',
-        feat2Check1: 'Always Open 24/7',
+        feat2Check1: 'Always Open',
         feat2Check2: 'Smart Temperature Control',
-        feat2Check3: 'Card & NFC Payment',
+        feat2Check3: 'Multiple Payment Options',
         feat2Visual: 'Instant transactions, zero waiting time',
         feat3Check1: 'End-to-End Encryption',
         feat3Check2: 'No Human Interaction',
         feat3Check3: 'Confidential Delivery',
-        feat3Visual: 'Encrypted contactless transactions',
+        feat3Visual: 'Military-grade encryption for all transactions',
 
         footerHomeLink: 'Home',
         footerMachinesLink: 'Machines',
@@ -284,72 +263,83 @@ const translations = {
         mapPlaceholder: 'Map coming soon',
 
         certifiedTitle: '100% Lab Certified',
-        certifiedDesc: 'Third-party lab tested with verifiable certificates for every batch.',
-        alwaysOpenTitle: 'Always Open 24/7',
-        alwaysOpenDesc: '24/7 non-stop availability at Gozsdu Udvar',
+        certifiedDesc: 'Third-party lab tested with verifiable batch certificates for every harvest.',
+        alwaysOpenTitle: 'Always Open',
+        alwaysOpenDesc: '24/7 availability across all locations',
         legalTitle: 'Full EU Compliance',
-        legalDesc: 'Fully compliant with Hungarian and EU regulations.',
+        legalDesc: 'Fully compliant with Hungarian pharmaceutical and EU botanical regulations.',
 
-        machinesBadge: 'Intelligent Dispensing',
+        machinesBadge: 'Intelligent Botanical Dispensing',
         machinesTitle: 'Our Machines',
-        machinesDesc: 'State-of-the-art vending technology engineered for certified premium products. Climate-controlled precision meets pharmaceutical-grade security.',
+        machinesDesc: 'State-of-the-art vending technology engineered for certified botanical wellness. Climate-controlled precision meets pharmaceutical-grade security.',
         backText: 'Back to Machines',
         categoriesTitle: 'Select Product Category',
 
-        locationsBadge: 'Retail Network',
+        locationsBadge: 'Botanical Retail Network',
         locationsTitle: 'Our Locations',
-        locationsDesc: 'Find Cannabox and Tyson automated dispensers located at Gozsdu Udvar in central Budapest.',
+        locationsDesc: 'Find certified Cannabox automated dispensers located throughout Budapest and major Hungarian urban hubs.',
 
         aboutBadge: 'Our Story and Standards',
         aboutTitle: 'About Cannabox',
-        aboutDesc: 'Pioneering premium CBD retail through precision vending technology and laboratory-tested quality.',
+        aboutDesc: 'Pioneering botanical wellness retail through precision technology and uncompromised organic quality.',
         missionTitle: 'Our Mission',
-        missionText: 'Cannabox makes laboratory-tested premium CBD products accessible, convenient, and completely discreet. Located at the entrance of Gozsdu Udvar in central Budapest, our smart vending machines offer 70+ quality products 24/7 with seamless Card and NFC contactless payment.',
+        missionText: 'Cannabox was founded with a single mission: to make certified organic CBD products accessible, convenient, and completely discreet. We believe natural wellness should be effortless. Through precision-engineered vending machines, we bring high-potency CBD closer to you, 24/7 without waiting in lines.',
         qualityTitle: 'Certified Quality',
-        qualityText: 'Every single item in our machines is third-party laboratory tested for purity and cannabinoid profile. We curate from trusted European manufacturers and the official Tyson 2.0 lineup. All products contain under 0.2% THC in strict compliance with Hungarian and EU regulations.',
+        qualityText: 'Every single item in our machines is third-party laboratory tested for purity, cannabinoid profile, and absence of heavy metals or pesticides. We source exclusively from certified organic European farms. All products contain under 0.2% THC in strict compliance with Hungarian and EU regulations.',
         innovationTitle: 'Intelligent Technology',
-        innovationText: 'Our smart vending solutions feature multi-zone climate control to protect delicate active ingredients. Real-time telemetry ensures stock freshness, and contactless Card & NFC payment provides instant, seamless, and secure transactions.',
+        innovationText: 'Our smart vending solutions feature multi-zone climate control to protect sensitive botanical terpenes and cannabinoids. Real-time telemetry ensures stock freshness, while card and NFC payment keep purchases quick and contactless.',
 
         viewCategories: 'View Categories',
         productsTitle: 'Products',
         findMachineBtn: 'Find in Machine',
         cbdContent: 'CBD Content',
         thcContent: 'THC Content',
-        detailsToggle: 'Full Description',
+        detailsToggle: 'Full Specifications',
         comingSoon: 'Coming Soon',
         available: 'Available',
 
         // Location Cards
         loc1Status: 'Active 24/7',
-        loc1Title: 'Cannabox Machine',
-        loc1Address: '1072 Budapest, Dob u. 16. (Gozsdu Udvar entrance)',
-        loc1HoursLabel: 'Opening Hours',
-        loc1Hours: 'Non-stop (0-24)',
+        loc1Title: 'Budapest Oktogon',
+        loc1Address: 'Teréz krt. 55, 1067 Budapest',
+        loc1ModelLabel: 'Dispenser Model',
+        loc1Model: 'Cannabox Standard',
         loc1StockLabel: 'Inventory Status',
-        loc1Stock: '70+ Products In Stock',
+        loc1Stock: '40+ Products In Stock',
         loc1PaymentLabel: 'Payment Modes',
-        loc1Payment: 'Card & NFC',
-        loc1Btn: 'View Products',
-        loc1DirectionsBtn: 'Get Directions',
+        loc1Payment: 'Contactless, Card & NFC',
+        loc1Btn: 'Check Live Stock',
 
         loc2Status: 'Coming Soon',
-        loc2Title: 'Tyson Machine',
-        loc2Address: '1072 Budapest, Dob u. 16. (Gozsdu Udvar entrance)',
-        loc2HoursLabel: 'Opening Hours',
-        loc2Hours: 'Non-stop (0-24)',
+        loc2Title: 'Budapest Downtown',
+        loc2Address: 'Váci utca 12, 1052 Budapest',
+        loc2ModelLabel: 'Dispenser Model',
+        loc2Model: 'Cannabox Pro Max',
         loc2StockLabel: 'Inventory Status',
-        loc2Stock: 'Tyson 2.0 Products',
+        loc2Stock: '60+ Products In Stock',
         loc2PaymentLabel: 'Payment Modes',
         loc2Payment: 'Card & NFC',
-        loc2Btn: 'View Products',
-        loc2DirectionsBtn: 'Get Directions',
+        loc2Btn: 'Check Live Stock',
 
-        locMapBadge: 'Location Map',
-        locMapTitle: 'Find Us in Budapest',
-        locMapDesc: 'Both Cannabox and Tyson machines are located at Gozsdu Udvar entrance (Dob u. 16.)',
-        locActiveUnits: 'Budapest, Gozsdu Udvar',
-        locAddress: '1072 Budapest, Dob u. 16. (Gozsdu Udvar entrance)',
-        locGetDirections: 'Open in Google Maps',
+        loc3Status: 'Coming Soon',
+        loc3Title: 'Debrecen City Center',
+        loc3Address: 'Piac utca 28, 4025 Debrecen',
+        loc3ModelLabel: 'Dispenser Model',
+        loc3Model: 'Cannabox Compact',
+        loc3LaunchLabel: 'Target Launch',
+        loc3Launch: 'Q3 2026',
+        loc3PaymentLabel: 'Payment Modes',
+        loc3Payment: 'Contactless & Card Only',
+        loc3Btn: 'Explore Model Specs',
+
+        // Telemetry
+        locTelemetryBadge: 'Live Telemetry Feed',
+        locTelemetryTitle: 'National Dispenser Network',
+        locOnlineUnits: 'Online: 2 Units',
+        locDeployUnits: 'Deployment: 1 Unit',
+        locMapTitle: 'Interactive Map System',
+        locMapDesc: 'Real-time GPS routing, live stock availability, and distance estimations across all Hungarian vending nodes.',
+        locMapCoords: '47.4979° N, 19.0402° E (Budapest Hub)',
 
         // Disclaimer
         footerDisclaimer: 'Legal Disclaimer',
@@ -364,9 +354,9 @@ const translations = {
         stuckProductClickToZoom: 'Click to zoom',
 
         certifiedTitle: '100% Lab Certified',
-        certifiedDesc: 'Third-party lab tested with verifiable batch certificates.',
+        certifiedDesc: 'Third-party lab tested with verifiable batch certificates for every harvest.',
         legalTitle: 'Full EU Compliance',
-        legalDesc: 'Fully compliant with Hungarian and EU regulations.'
+        legalDesc: 'Fully compliant with Hungarian pharmaceutical and EU botanical regulations.'
     }
 };
 
@@ -391,6 +381,7 @@ function selectLanguage(lang) {
         updateContent();
         if (typeof renderMachines === 'function') renderMachines();
         if (typeof initMachineDetail === 'function') initMachineDetail();
+        if (typeof renderProductMenus === 'function') renderProductMenus();
     }, 350);
 }
 
@@ -405,6 +396,7 @@ function switchLanguage(lang) {
     if (typeof renderProducts === 'function' && typeof currentCategory !== 'undefined' && currentCategory) {
         renderProducts(currentCategory);
     }
+    if (typeof renderProductMenus === 'function') renderProductMenus();
 }
 
 function updateActiveLangButton() {
@@ -437,29 +429,6 @@ function updateContent() {
             } else {
                 el.textContent = t[key];
             }
-        }
-    });
-
-    // Update category label classes in the dropdown
-    const catClassMap = {
-        'cat-name-teas': t.catNameTeas,
-        'cat-name-brownies': t.catNameBrownies,
-        'cat-name-gummies': t.catNameGummies,
-        'cat-name-chewing-gum': t.catNameChewingGum,
-        'cat-name-chocolate': t.catNameChocolate,
-        'cat-name-cookies': t.catNameCookies,
-        'cat-name-capsules': t.catNameCapsules,
-        'cat-name-dextrose': t.catNameDextrose,
-        'cat-name-lollipops': t.catNameLollipops,
-        'cat-name-drinks': t.catNameDrinks,
-        'cat-name-oils': t.catNameOils
-    };
-
-    Object.keys(catClassMap).forEach(cls => {
-        if (catClassMap[cls]) {
-            document.querySelectorAll(`.${cls}`).forEach(node => {
-                node.textContent = catClassMap[cls];
-            });
         }
     });
 
@@ -586,20 +555,18 @@ function ensureDisclaimerModal() {
                     <h2 id="disclaimerTitle" class="text-xl font-bold text-white font-display">Legal Disclaimer</h2>
                 </div>
             </div>
-            <div id="disclaimerScrollContainer" class="p-6 overflow-y-auto space-y-4 custom-scrollbar flex-1">
-                <div id="disclaimerText" class="text-emerald-100/80 text-sm leading-relaxed space-y-3">
-                    <!-- Dynamic disclaimer content -->
-                </div>
-                <div id="disclaimerScrollHint" class="text-center text-xs text-amber-400/80 animate-pulse pt-2">
-                    ↓ Scroll to bottom ↓
+            <div id="disclaimerContent" class="p-6 overflow-y-auto custom-scrollbar flex-1 space-y-4 text-emerald-100/80 leading-relaxed bg-[#050b08]/80">
+                <div id="disclaimerText" class="space-y-4"></div>
+                <div class="h-16 flex items-center justify-center text-emerald-400 text-xs font-semibold tracking-wider uppercase">
+                    <span id="disclaimerScrollHint" class="animate-bounce">↓ Scroll down to continue ↓</span>
                 </div>
             </div>
             <div class="p-6 border-t border-emerald-800/40 bg-[#0a1810] space-y-4">
-                <label class="flex items-start gap-3 cursor-pointer select-none">
-                    <input type="checkbox" id="disclaimerCheckbox" disabled class="mt-1 w-5 h-5 rounded border-emerald-700 text-emerald-500 focus:ring-emerald-500 bg-emerald-950/50 transition-all opacity-50 cursor-not-allowed">
-                    <span id="checkboxLabel" class="text-sm text-emerald-200/80 font-medium">I confirm I have read and understood the disclaimer above</span>
+                <label class="flex items-start gap-3 cursor-pointer group">
+                    <input type="checkbox" id="disclaimerCheck" disabled class="w-5 h-5 mt-0.5 rounded border-emerald-700 bg-emerald-950/80 text-emerald-500 focus:ring-emerald-400 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
+                    <span id="checkboxLabel" class="text-sm text-emerald-200/80 group-hover:text-emerald-100 transition-colors">I confirm I have read and understood the disclaimer above</span>
                 </label>
-                <button id="enterBtn" disabled onclick="acceptDisclaimer()" class="w-full py-3.5 px-6 rounded-xl bg-emerald-500 text-black font-bold text-base transition-all opacity-50 cursor-not-allowed hover:bg-emerald-400 shadow-lg shadow-emerald-950/50">
+                <button id="enterBtn" onclick="acceptDisclaimer()" disabled class="btn-primary w-full text-center justify-center disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100">
                     Enter Website
                 </button>
             </div>

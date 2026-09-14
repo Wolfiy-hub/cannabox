@@ -2,10 +2,10 @@ const featureLabels = {
     hu: {
         'Touchscreen Display': 'Érintőképernyős kijelző',
         'Card Payment': 'Bankkártyás fizetés',
-        'Card & NFC Payment': 'Bankkártya & NFC fizetés',
         'Temperature Controlled': 'Hőmérséklet-szabályozás',
         'Real-time Stock': 'Valós idejű készlet',
         '60+ Products': '60+ prémium termék',
+        'Card & NFC Payment': 'Bankkártya és NFC fizetés',
         'Climate Control': 'Klímaszabályozás',
         '20 Products': '20 válogatott termék',
         'Card Only': 'Csak bankkártyás fizetés',
@@ -15,10 +15,10 @@ const featureLabels = {
     en: {
         'Touchscreen Display': 'Touchscreen Display',
         'Card Payment': 'Card Payment',
-        'Card & NFC Payment': 'Card & NFC Payment',
         'Temperature Controlled': 'Temperature Controlled',
         'Real-time Stock': 'Real-time Stock',
         '60+ Products': '60+ Products',
+        'Card & NFC Payment': 'Card & NFC Payment',
         'Climate Control': 'Climate Control',
         '20 Products': '20 Products',
         'Card Only': 'Card Only',
@@ -43,7 +43,7 @@ const machinesData = [
         status: 'available',
         description: 'Our flagship smart vending machine with 40+ botanical CBD product capacity and interactive touchscreen interface.',
         descriptionHu: 'Zászlóshajó intelligens automatánk 40+ növényi CBD termékkapacitással és interaktív érintőképernyős kezelőfelülettel.',
-        features: ['Touchscreen Display', 'Card & NFC Payment', 'Temperature Controlled', 'Real-time Stock'],
+        features: ['Touchscreen Display', 'Card Payment', 'Temperature Controlled', 'Real-time Stock'],
         categories: ['teas', 'brownies', 'gummies', 'chewing-gum', 'chocolate', 'cookies', 'capsules', 'dextrose', 'lollipops', 'drinks', 'oils']
     },
     {
@@ -59,25 +59,39 @@ const machinesData = [
         googleMaps: 'https://www.google.com/maps/place/CANNABIS-+CANNABOX+CBD+VENDING+MACHINE/@47.4990768,19.0553946,17z/data=!4m10!1m2!2m1!1scannabox!3m6!1s0x4741dd7da9aff23d:0x6ac78ed7fda5cefb!8m2!3d47.498602!4d19.0593287!15sCghjYW5uYWJveZIBGHZlbmRpbmdfbWFjaGluZV9zdXBwbGllcuABAA!16s%2Fg%2F11yd6jm8l1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D',
         image: 'https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1000&q=80',
         status: 'coming-soon',
-        description: 'High-capacity luxury dispenser featuring climate-controlled chambers and secure contactless payment.',
-        descriptionHu: 'Nagy kapacitású luxus automata klímaszabályozott rekeszekkel és biztonságos érintésmentes fizetéssel.',
-        features: ['60+ Products', 'Climate Control', 'Card & NFC Payment', 'Touchscreen Display'],
+        description: 'High-capacity luxury dispenser with climate-controlled chambers and card and NFC payment.',
+        descriptionHu: 'Nagy kapacitású luxus automata klímaszabályozott rekeszekkel, bankkártyás és NFC fizetéssel.',
+        features: ['60+ Products', 'Card & NFC Payment', 'Climate Control'],
         categories: ['gummies', 'chewing-gum', 'chocolate', 'cookies']
     }
+    // Commented out - Cannabox Compact not in use
+    // {
+    //     id: 3,
+    //     name: 'Cannabox Compact',
+    //     nameHu: 'Cannabox Kompakt',
+    //     location: 'Debrecen, Piac utca 28.',
+    //     locationHu: 'Debrecen, Piac utca 28.',
+    //     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
+    //     status: 'coming-soon',
+    //     description: 'Sleek and space-efficient wall-mounted unit crafted for boutique hotels, wellness centers, and exclusive venues.',
+    //     descriptionHu: 'Elegáns, helytakarékos falra szerelhető egység butikhotelek, wellness központok és exkluzív helyszínek számára.',
+    //     features: ['20 Products', 'Card Only', 'Compact Size', 'Wall Mountable'],
+    //     categories: ['gummies', 'oils']
+    // }
 ];
 
 const categoriesData = {
-    teas: { name: 'Cannabis Teas', nameHu: 'Cannabis Teák', icon: 'coffee' },
-    brownies: { name: 'Cannabis Brownies', nameHu: 'Cannabis Brownie-k', icon: 'cake' },
     gummies: { name: 'CBD Gummies', nameHu: 'CBD Gumicukrok', icon: 'candy' },
-    'chewing-gum': { name: 'CBD Chewing Gum', nameHu: 'CBD Rágógumi', icon: 'circle' },
+    oils: { name: 'CBD Oils & Extracts', nameHu: 'CBD Olajok és Kivonatok', icon: 'droplet' },
+    capsules: { name: 'Herbal Capsules', nameHu: 'Gyógynövény Kapszulák', icon: 'pill' },
+    teas: { name: 'Cannabis Teas', nameHu: 'Cannabis Teák', icon: 'coffee' },
     chocolate: { name: 'Cannabis Chocolates', nameHu: 'Cannabis Csokoládék', icon: 'cookie' },
     cookies: { name: 'Cannabis Cookies', nameHu: 'Cannabis Kekszek', icon: 'cookie' },
-    capsules: { name: 'Herbal Capsules', nameHu: 'Gyógynövény Kapszulák', icon: 'pill' },
-    dextrose: { name: 'Cannabis Dextrose', nameHu: 'Cannabis Szőlőcukor', icon: 'candy' },
+    brownies: { name: 'Cannabis Brownies', nameHu: 'Cannabis Brownie-k', icon: 'cake' },
+    'chewing-gum': { name: 'CBD Chewing Gum', nameHu: 'CBD Rágógumi', icon: 'circle' },
     lollipops: { name: 'CBD Lollipops', nameHu: 'CBD Nyalókák', icon: 'lollipop' },
     drinks: { name: 'Cannabis Drinks', nameHu: 'Cannabis Italok', icon: 'cup-soda' },
-    oils: { name: 'CBD Oils & Extracts', nameHu: 'CBD Olajok és Kivonatok', icon: 'droplet' }
+    dextrose: { name: 'Cannabis Dextrose', nameHu: 'Cannabis Szőlőcukor', icon: 'candy' }
 };
 
 function getCurrentLanguage() {
@@ -97,10 +111,10 @@ function renderMachines() {
         const description = isHu ? machine.descriptionHu : machine.description;
         const isComingSoon = machine.status === 'coming-soon';
         const featureText = (feat) => (featureLabels[lang] && featureLabels[lang][feat]) ? featureLabels[lang][feat] : feat;
-        const link = `machine-detail.html?id=${machine.id}`;
+        const link = isComingSoon ? 'javascript:void(0);' : `machine-detail.html?id=${machine.id}`;
 
         return `
-            <a href="${link}" class="machine-card group block">
+            <a href="${link}" class="machine-card group block ${isComingSoon ? 'cursor-not-allowed opacity-80' : ''}">
                 <div class="relative aspect-video overflow-hidden">
                     <img src="${machine.image}" alt="${name}" loading="lazy" class="h-full w-full object-cover" />
                     <div class="absolute inset-0 bg-gradient-to-t from-[#050b08] via-transparent to-black/30"></div>
@@ -132,12 +146,14 @@ function renderMachines() {
                         `).join('')}
                     </div>
 
-                    <div class="pt-2 flex items-center justify-between text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors">
-                        <span>${isHu ? 'Készlet és Részletek megtekintése' : 'View Stock & Details'}</span>
-                        <div class="w-8 h-8 rounded-lg bg-emerald-900/40 flex items-center justify-center group-hover:translate-x-1 group-hover:bg-emerald-800/60 transition-all">
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    ${!isComingSoon ? `
+                        <div class="pt-2 flex items-center justify-between text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                            <span>${isHu ? 'Készlet és Részletek megtekintése' : 'View Stock & Details'}</span>
+                            <div class="w-8 h-8 rounded-lg bg-emerald-900/40 flex items-center justify-center group-hover:translate-x-1 group-hover:bg-emerald-800/60 transition-all">
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
                         </div>
-                    </div>
+                    ` : ''}
                 </div>
             </a>
         `;
@@ -257,7 +273,6 @@ function renderCategories(machine) {
 function initMachineDetail() {
     const params = new URLSearchParams(window.location.search);
     const machineId = params.get('id') || '1';
-    const categoryId = params.get('cat');
 
     const machine = getMachineById(machineId);
     if (!machine) {
@@ -268,8 +283,9 @@ function initMachineDetail() {
     renderMachineHeader(machine);
     renderCategories(machine);
 
-    if (categoryId && (categoriesData[categoryId] || machine.categories.includes(categoryId))) {
-        showProducts(categoryId);
+    const category = params.get('category');
+    if (category && machine.categories.includes(category)) {
+        showProducts(category);
     }
 }
 

@@ -6,18 +6,6 @@ function toggleMobileMenu() {
     }
 }
 
-// Mobile Products Submenu Toggle
-function toggleMobileProductsMenu() {
-    const dropdown = document.getElementById('mobileProductsDropdown');
-    const icon = document.getElementById('mobileProductsIcon');
-    if (dropdown) {
-        dropdown.classList.toggle('hidden');
-        if (icon) {
-            icon.classList.toggle('rotate-180');
-        }
-    }
-}
-
 // Header scroll effect
 let lastScroll = 0;
 window.addEventListener('scroll', () => {

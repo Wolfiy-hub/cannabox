@@ -239,8 +239,7 @@ const productsDatabase = [
         image: 'products/extracted_images/Multitrance natur gumicukor_img1.jpg',
         images: [
             'products/extracted_images/Multitrance natur gumicukor_img1.jpg',
-            'products/extracted_images/Multitrance natur gumicukor_img2.jpg',
-            'products/extracted_images/Multitrance natur gumicukor_img3.jpg'
+            'products/extracted_images/Multitrance natur gumicukor_img2.jpg'
         ],
         status: 'available'
     },
@@ -1124,6 +1123,7 @@ function getActiveMachineId() {
 }
 
 let currentCategory = null;
+const categoryOrder = ['teas', 'brownies', 'gummies', 'chewing-gum', 'chocolate', 'cookies', 'capsules', 'dextrose', 'lollipops', 'drinks', 'oils'];
 
 function renderProducts(categoryId) {
     currentCategory = categoryId;
@@ -1139,7 +1139,7 @@ function renderProducts(categoryId) {
         const matchesCategory = product.category === categoryId;
         const matchesMachine = product.machineIds && product.machineIds.includes(machineId);
         return matchesCategory && matchesMachine;
-    });
+    }).sort((firstProduct, secondProduct) => categoryOrder.indexOf(firstProduct.category) - categoryOrder.indexOf(secondProduct.category));
 
     if (products.length === 0) {
         grid.innerHTML = `
